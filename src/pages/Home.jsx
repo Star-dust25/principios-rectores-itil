@@ -57,8 +57,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              {empresa.nombre} pasa de la espiral del "apagafuegos" a un círculo virtuoso de valor, aprendizaje y mejora
-              continua. Explora el caso, el diagrama causal y simula el efecto de cada principio.
+              Descubre cómo {empresa.nombre} dejó de resolver emergencias a diario para brindar un servicio de TI estable, organizado y enfocado en sus clientes. Explora el caso paso a paso y prueba la simulación interactiva.
             </motion.p>
             <motion.div
               className="hero-actions"
