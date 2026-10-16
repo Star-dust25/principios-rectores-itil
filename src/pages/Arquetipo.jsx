@@ -3,7 +3,7 @@ import CausalLoopDiagram from '../components/CausalLoopDiagram'
 import SimulationPanel from '../components/SimulationPanel'
 import { Page, PageNav, Reveal } from '../components/Layout'
 import { principios } from '../data/caso'
-import { diagramas } from '../data/diagramas'
+import { diagramas, tablaBucles } from '../data/diagramas'
 import { useCasoStore } from '../store/useCasoStore'
 
 const contrarresta = [
@@ -178,6 +178,85 @@ export default function Arquetipo() {
                 salida: <b style={{ color: 'var(--success)' }}>mejora continua</b> y{' '}
                 <b style={{ color: 'var(--success)' }}>satisfacción del usuario</b>.
               </p>
+            </div>
+          </Reveal>
+        </section>
+
+        <section className="sec" id="tabla-bucles">
+          <Reveal>
+            <span className="eyebrow">Matriz sistémica</span>
+            <h2 className="h2">Explicación de los 4 bucles (R1 · R2 · B1 · R3)</h2>
+            <p className="lead">
+              Conoce el propósito, el circuito causal cerrado y los principios de ITIL 4 que componen cada bucle del arquetipo.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="glass mt-24 table-scroll">
+              <table className="data-table">
+                <thead>
+                  <tr>
+                    <th style={{ width: '85px' }}>Bucle</th>
+                    <th style={{ minWidth: '170px' }}>Nombre y tipo</th>
+                    <th style={{ minWidth: '270px' }}>Circuito causal (Paso a paso)</th>
+                    <th style={{ minWidth: '260px' }}>Propósito e impacto sistémico</th>
+                    <th style={{ minWidth: '190px' }}>Principios impulsores</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tablaBucles.map((b) => (
+                    <tr
+                      key={b.id}
+                      className={bucleActivo === b.id ? 'row-active' : ''}
+                      onClick={() => toggleBucle(b.id)}
+                      style={{ cursor: 'pointer' }}
+                      title="Haz clic para resaltar este bucle en el diagrama causal superior"
+                    >
+                      <td>
+                        <span className={`chip chip-loop-${b.tipo}`}>
+                          {b.id}
+                        </span>
+                      </td>
+                      <td>
+                        <strong style={{ display: 'block', color: 'var(--cream)', fontFamily: 'var(--font-display)', fontSize: '1.02rem' }}>
+                          {b.nombre}
+                        </strong>
+                        <span className="small muted">{b.tipoTexto}</span>
+                      </td>
+                      <td>
+                        <code className="chain-code">{b.cadena}</code>
+                      </td>
+                      <td>
+                        <p className="small" style={{ margin: 0, lineHeight: 1.55 }}>
+                          {b.proposito}
+                        </p>
+                        <p className="small muted" style={{ margin: '6px 0 0', fontStyle: 'italic' }}>
+                          <b style={{ color: 'var(--seafoam)' }}>Impacto:</b> {b.impacto}
+                        </p>
+                      </td>
+                      <td>
+                        <div className="flex wrap gap-6">
+                          {b.principios.map((id) => {
+                            const p = principios.find((x) => x.id === id)
+                            return (
+                              <span
+                                key={id}
+                                className="principle-pill-sm"
+                                style={{ '--pc': p.color }}
+                              >
+                                <i className={p.icon} aria-hidden="true" /> P{p.id} · {p.nombre.split(' ')[0]}
+                              </span>
+                            )
+                          })}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="scroll-hint">
+              <i className="fa-solid fa-arrows-left-right" aria-hidden="true" /> Desliza horizontalmente para ver la tabla completa · Toca una fila para resaltar el bucle en el diagrama
             </div>
           </Reveal>
         </section>

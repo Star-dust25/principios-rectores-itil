@@ -1108,6 +1108,104 @@ a { color: inherit; }
   background: linear-gradient(135deg, rgba(24, 47, 83, 0.75), rgba(12, 24, 43, 0.85)) !important;
 }
 
+/* ---------- Tables & Data Displays ---------- */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(24, 47, 83, 0.55), rgba(12, 24, 43, 0.7));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+  -webkit-overflow-scrolling: touch;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.92rem;
+  min-width: 820px;
+}
+.data-table th,
+.data-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(249, 238, 226, 0.08);
+  vertical-align: top;
+}
+.data-table th {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--seafoam);
+  background: rgba(12, 24, 41, 0.94);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  white-space: nowrap;
+}
+.data-table tbody tr {
+  transition: background 0.2s ease;
+}
+.data-table tbody tr:hover {
+  background: rgba(249, 238, 226, 0.05);
+}
+.data-table tbody tr.row-active {
+  background: rgba(94, 234, 212, 0.1);
+  box-shadow: inset 4px 0 0 var(--seafoam);
+}
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+.chain-code {
+  display: block;
+  font-family: 'Urbanist', system-ui, monospace;
+  font-size: 0.82rem;
+  font-weight: 500;
+  background: rgba(12, 24, 41, 0.7);
+  border: 1px solid rgba(249, 238, 226, 0.12);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: var(--cream);
+  line-height: 1.5;
+}
+.principle-pill-sm {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(24, 47, 83, 0.65);
+  border: 1px solid color-mix(in srgb, var(--pc) 45%, transparent);
+  color: var(--cream);
+  white-space: nowrap;
+}
+.principle-pill-sm i {
+  color: var(--pc);
+  font-size: 0.78rem;
+}
+.scroll-hint {
+  display: flex;
+  font-size: 0.82rem;
+  color: var(--text-mute);
+  margin-top: 10px;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.val-bad {
+  color: var(--coral);
+  font-weight: 700;
+}
+.val-good {
+  color: var(--seafoam);
+  font-weight: 700;
+}
+
 /* ---------- Utilities ---------- */
 .flex { display: flex; }
 .items-center { align-items: center; }

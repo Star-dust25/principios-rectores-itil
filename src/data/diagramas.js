@@ -142,3 +142,46 @@ export const diagramas = {
     ],
   },
 }
+
+export const tablaBucles = [
+  {
+    id: 'R1',
+    tipo: 'R',
+    tipoTexto: 'Refuerzo (Virtuoso)',
+    nombre: 'Bucle del valor',
+    proposito: 'Asegura el respaldo y presupuesto de la dirección demostrando valor real y medible en los servicios prioritarios.',
+    cadena: 'Alineación TI–negocio → (+) Valor entregado → (+) Satisfacción del usuario → (+) Patrocinio directivo → (+) Alineación',
+    principios: [1, 4, 5],
+    impacto: 'Elimina la desalineación con el negocio y convierte a TI en un socio estratégico de la operación.',
+  },
+  {
+    id: 'R2',
+    tipo: 'R',
+    tipoTexto: 'Refuerzo (Virtuoso)',
+    nombre: 'Aprendizaje iterativo',
+    proposito: 'Establece una cultura basada en datos y retroalimentación rápida para no repetir errores pasados.',
+    cadena: 'Visibilidad y métricas → (+) Retroalimentación y aprendizaje → (+) Mejora continua → (+) Visibilidad y métricas',
+    principios: [2, 3, 4],
+    impacto: 'Resuelve la ausencia de métricas; sustituye suposiciones por decisiones respaldadas en KPIs.',
+  },
+  {
+    id: 'B1',
+    tipo: 'B',
+    tipoTexto: 'Balance (Estabilizador)',
+    nombre: 'Control del cambio',
+    proposito: 'Regula y estabiliza el sistema: si surgen fallas, activa análisis de causa raíz y validación de cambios antes de desplegar.',
+    cadena: 'Incidentes → (+) Visibilidad → (+) Aprendizaje de fallas → (+) Cambios probados y exitosos → (−) Menos incidentes',
+    principios: [4, 5, 6],
+    impacto: 'Frena los cambios caóticos en producción y reduce drásticamente las fallas recurrentes.',
+  },
+  {
+    id: 'R3',
+    tipo: 'R',
+    tipoTexto: 'Refuerzo (Virtuoso)',
+    nombre: 'Capacidad liberada',
+    proposito: 'Punto de apalancamiento sistémico: menos incidentes liberan horas del equipo para simplificar y automatizar.',
+    cadena: 'Incidentes (−) → (+) Capacidad de tiempo liberada → (+) Mejora continua → (+) Automatización → (−) Menos incidentes',
+    principios: [6, 7],
+    impacto: 'Invierte la espiral del apagafuegos: el equipo pasa de 80% reactivo a tener tiempo para innovar.',
+  },
+]
