@@ -39,18 +39,10 @@ const pasos = [
 
 export default function Home() {
   return (
-    <Page>
+    <Page className="page-home">
       <div className="container-x">
         <section className="hero-grid">
-          <div>
-            <motion.span
-              className="eyebrow"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.1 }}
-            >
-              <i className="fa-solid fa-diagram-project" aria-hidden="true" /> Caso práctico 02 · ITIL 4 + Dinámica de sistemas
-            </motion.span>
+          <div className="hero-content">
             <motion.h1
               className="h1"
               initial={{ opacity: 0, y: 20 }}

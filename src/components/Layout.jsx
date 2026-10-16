@@ -50,11 +50,11 @@ export function BackToTop() {
   )
 }
 
-export function Page({ children }) {
+export function Page({ children, className = '' }) {
   return (
     <motion.main
       id="main-content"
-      className="page"
+      className={`page ${className}`.trim()}
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}

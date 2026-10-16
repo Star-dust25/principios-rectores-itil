@@ -56,7 +56,7 @@ export const principios = [
     clave: 'valor',
     nombre: 'Centrarse en el valor',
     icon: 'fa-solid fa-gem',
-    color: '#f5b941',
+    color: '#E9C46A',
     resumen: 'Asegurar que las actividades generen valor para clientes y la organización.',
     acciones: [
       'Talleres con Operaciones, Comercial y Finanzas para identificar los 5 servicios críticos.',
@@ -71,7 +71,7 @@ export const principios = [
     clave: 'comenzar',
     nombre: 'Comenzar donde se está',
     icon: 'fa-solid fa-location-dot',
-    color: '#4fd1c5',
+    color: '#5EEAD4',
     resumen: 'Aprovechar los procesos y recursos existentes antes de empezar desde cero.',
     acciones: [
       'Se evalúa la herramienta de tickets existente antes de comprar una nueva.',
@@ -86,7 +86,7 @@ export const principios = [
     clave: 'iterar',
     nombre: 'Progresar iterativamente con retroalimentación',
     icon: 'fa-solid fa-arrows-rotate',
-    color: '#7f9cf5',
+    color: '#70B8FF',
     resumen: 'Avanzar en pasos pequeños y recoger feedback.',
     acciones: [
       'Iteraciones trimestrales: catálogo + métricas → cambios → problemas → automatización.',
@@ -101,7 +101,7 @@ export const principios = [
     clave: 'colaborar',
     nombre: 'Colaborar y promover la visibilidad',
     icon: 'fa-solid fa-eye',
-    color: '#f687b3',
+    color: '#F9EEE2',
     resumen: 'Fomentar la comunicación y transparencia entre las áreas.',
     acciones: [
       'Tablero de servicio público: disponibilidad, incidentes, cambios y CSAT.',
@@ -116,7 +116,7 @@ export const principios = [
     clave: 'holistico',
     nombre: 'Pensar y trabajar de forma holística',
     icon: 'fa-solid fa-circle-nodes',
-    color: '#68d391',
+    color: '#38BDF8',
     resumen: 'Considerar el sistema completo: personas, tecnología y proveedores.',
     acciones: [
       'Análisis de las 4 dimensiones de ITIL en cada servicio crítico.',
@@ -131,7 +131,7 @@ export const principios = [
     clave: 'simple',
     nombre: 'Mantenerlo simple y práctico',
     icon: 'fa-solid fa-feather',
-    color: '#fc8181',
+    color: '#FCA5A5',
     resumen: 'Evitar la complejidad innecesaria en los nuevos procesos.',
     acciones: [
       'Solo 3 tipos de cambio: estándar, normal (CAB semanal de 30 min) y emergencia.',
@@ -146,7 +146,7 @@ export const principios = [
     clave: 'automatizar',
     nombre: 'Optimizar y automatizar',
     icon: 'fa-solid fa-gears',
-    color: '#b794f4',
+    color: '#C4B5FD',
     resumen: 'Mejorar los flujos de trabajo antes de implementar la automatización.',
     acciones: [
       'Primero se eliminan aprobaciones duplicadas y pasos manuales sin valor.',

@@ -7,10 +7,10 @@ const HW = 92 // media anchura del nodo
 const HH = 30 // media altura del nodo
 
 const COLORS = {
-  base: 'rgba(168, 178, 220, 0.55)',
-  input: '#ff6b81',
-  R: '#3dd6c6',
-  B: '#f5b941',
+  base: 'rgba(249, 238, 226, 0.45)',
+  input: '#F87171',
+  R: '#5EEAD4',
+  B: '#E9C46A',
 }
 
 // Intersección de la recta centro→objetivo con el borde del rectángulo del nodo.
@@ -222,16 +222,16 @@ export default function CausalLoopDiagram() {
                 </marker>
               ))}
               <linearGradient id="node-in" x1="0" x2="1">
-                <stop offset="0" stopColor="#ff6b81" stopOpacity="0.22" />
-                <stop offset="1" stopColor="#ff6b81" stopOpacity="0.08" />
+                <stop offset="0" stopColor="#F87171" stopOpacity="0.25" />
+                <stop offset="1" stopColor="#F87171" stopOpacity="0.08" />
               </linearGradient>
               <linearGradient id="node-out" x1="0" x2="1">
-                <stop offset="0" stopColor="#4ade80" stopOpacity="0.08" />
-                <stop offset="1" stopColor="#4ade80" stopOpacity="0.22" />
+                <stop offset="0" stopColor="#5EEAD4" stopOpacity="0.08" />
+                <stop offset="1" stopColor="#5EEAD4" stopOpacity="0.25" />
               </linearGradient>
               <linearGradient id="node-mid" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stopColor="#1a2146" />
-                <stop offset="1" stopColor="#10152e" />
+                <stop offset="0" stopColor="#182F53" />
+                <stop offset="1" stopColor="#10213d" />
               </linearGradient>
               <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
                 <feGaussianBlur stdDeviation="6" result="b" />
@@ -273,14 +273,14 @@ export default function CausalLoopDiagram() {
                       ))}
                     </g>
                   )}
-                  <circle cx={lp[0]} cy={lp[1]} r="10" fill="#0b1022" stroke={color} strokeOpacity="0.5" />
+                  <circle cx={lp[0]} cy={lp[1]} r="10" fill="#10213d" stroke={color} strokeOpacity="0.5" />
                   <text
                     className="cld-pol"
                     x={lp[0]}
                     y={lp[1] + 1}
                     textAnchor="middle"
                     dominantBaseline="central"
-                    fill={e.pol === '+' ? '#3dd6c6' : '#ff6b81'}
+                    fill={e.pol === '+' ? '#5EEAD4' : '#F87171'}
                   >
                     {e.pol === '+' ? '+' : '−'}
                   </text>
@@ -299,10 +299,10 @@ export default function CausalLoopDiagram() {
                     : 'url(#node-mid)'
               const stroke =
                 n.type === 'input'
-                  ? 'rgba(255,107,129,0.6)'
+                  ? 'rgba(248,113,113,0.7)'
                   : n.type === 'output'
-                    ? 'rgba(74,222,128,0.6)'
-                    : 'rgba(139,124,246,0.45)'
+                    ? 'rgba(94,234,212,0.7)'
+                    : 'rgba(249,238,226,0.35)'
               return (
                 <g key={n.id} className={`cld-node ${dim ? 'cld-dim' : ''}`} id={`node-${n.id}`}>
                   <rect
@@ -322,7 +322,7 @@ export default function CausalLoopDiagram() {
                       x={n.x}
                       y={n.y - HH - 9}
                       textAnchor="middle"
-                      fill={n.type === 'input' ? '#ff6b81' : '#4ade80'}
+                      fill={n.type === 'input' ? '#F87171' : '#5EEAD4'}
                     >
                       {n.type === 'input' ? 'ENTRADA' : 'SALIDA'}
                     </text>

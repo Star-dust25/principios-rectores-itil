@@ -42,10 +42,10 @@ function Sparkline({ data, color, invert }) {
 }
 
 const KPIS = [
-  { key: 'csat', label: 'Satisfacción (CSAT)', fmt: (v) => v.toFixed(1), unit: '/5', better: 'up', color: '#4ade80' },
-  { key: 'fallidos', label: 'Cambios fallidos', fmt: (v) => v.toFixed(0), unit: '%', better: 'down', color: '#f472b6' },
-  { key: 'mttr', label: 'MTTR', fmt: (v) => v.toFixed(1), unit: 'h', better: 'down', color: '#f5b941' },
-  { key: 'mejora', label: 'Índice de mejora', fmt: (v) => v.toFixed(0), unit: '/100', better: 'up', color: '#3dd6c6' },
+  { key: 'csat', label: 'Satisfacción (CSAT)', fmt: (v) => v.toFixed(1), unit: '/5', better: 'up', color: '#5EEAD4' },
+  { key: 'fallidos', label: 'Cambios fallidos', fmt: (v) => v.toFixed(0), unit: '%', better: 'down', color: '#FCA5A5' },
+  { key: 'mttr', label: 'MTTR', fmt: (v) => v.toFixed(1), unit: 'h', better: 'down', color: '#E9C46A' },
+  { key: 'mejora', label: 'Índice de mejora', fmt: (v) => v.toFixed(0), unit: '/100', better: 'up', color: '#F9EEE2' },
 ]
 
 export default function SimulationPanel() {
